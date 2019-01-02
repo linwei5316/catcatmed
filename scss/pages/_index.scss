@@ -35,6 +35,14 @@ nav.navigation-index {
   }
 }
 
+.cat-hand {
+  width: 70px;
+  @include mobile(){
+    width: 35px;
+    margin-right: 20px;
+  }
+}
+
 .story-intro {
   padding: 0 50px;
   @include mobile(){
@@ -104,15 +112,38 @@ nav.navigation-index {
   }
 }
 
-.team-menber-list {
-  padding: 0 60px;
+.wrapper {
+  overflow-x: auto;
+  margin: 0 120px;
   @include mobile(){
-    padding: 0 30px;
+    margin: 0 30px;
+  }
+}
+
+.team-menber-list {
+  white-space: nowrap;
+
+  @include mobile(){
+    margin-bottom: 20px;
   }
 
   & > li {
-    @include size(180px, 210px);
+    display: inline-block;
+    background-color: $white;
+    padding: 40px;
+    padding-bottom: 80px;
     text-align: center;
+    
+    &:not(:last-child){
+      margin-right: 60px;
+      @include mobile(){
+        margin-right: 30px;
+      }
+    }
+
+    & > img {
+      @include size(120px);
+    }
   }
 }
 

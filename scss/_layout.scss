@@ -35,6 +35,14 @@ a {
 
 a {
   color: $linkBlue;
+  transition: opacity 0.3s;
+
+  &:not(.btn):hover {
+    opacity: 0.6;
+  }
+  &:not(.btn):active {
+    opacity: 1;
+  }
 }
 // ----------
 
@@ -173,7 +181,7 @@ nav {
   }
 
   &.is-scrolled {
-    background-color: rgba($navBlack, 0.4);
+    background-color: rgba($navBlack, 0.5);
     box-shadow: 0 0 10px rgba(black, 0.2);
   }
 

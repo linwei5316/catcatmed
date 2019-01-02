@@ -40,10 +40,13 @@
   font-size: $btnFontSize;
   padding: $btnPaddingY $btnPaddingX;
   outline: none;
+  border-width: $btnBorder;
+  border-style: solid;
   cursor: pointer;
   user-select: none;
   border-radius: 10px;
   border-radius: $rounded;
+  transition: 0.3s;
 }
 
 .btn-lg {
@@ -52,13 +55,16 @@
 }
 
 @each $name, $color in $types {
-  %clearBorder{
-    border: none;
-  }
-
   .btn-#{$name} {
-    @extend %clearBorder;
+    border-color: $color;
     background-color: $color;
+
+    &:hover {
+      background-color: transparent;
+    }
+    &:active {
+      background-color: $color;
+    }
   }
 }
 
@@ -73,7 +79,14 @@
 
   .btn-outline-#{$name} {
     @extend %clearBackgroundColor;
-    border: $btnBorder solid $color;
+    border-color: $color;
+
+    &:hover {
+      background-color: $color;
+    }
+    &:active {
+      background-color: transparent;
+    }
   }
 }
 //  ----------
