@@ -50,3 +50,8 @@ q {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+// 清除 iphone 手機預設按鈕
+input[type=submit] {
+  appearance: button;
+}

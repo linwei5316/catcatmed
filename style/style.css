@@ -55,6 +55,12 @@ table {
   border-spacing: 0;
 }
 
+input[type=submit] {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+}
+
 .bg-primary {
   background-color: #EF5981;
 }
