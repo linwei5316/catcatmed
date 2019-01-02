@@ -4,9 +4,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>catcatmed</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="ts/all.js"></script>
 </head>
 <body>
+  <!-- 這個菜單比較不好做，這邊是用方便的做法，記得要換網址時要改到所有相對的連結 -->
+  <!-- 桌面版分別左右兩個 ul，手機版只顯示下面的 ul，mobile-hidden 與 desktop-hidden 代表哪種裝置不顯示 -->
+  <nav class="navigation navigation-index">
+    <!-- <img class="logo desktop-hidden" src="images/logo.png"> -->
+    <a class="p-0 flex-center desktop-hidden" href="index.html">
+      <img class="logo" src="images/logo.png">
+    </a>
+    
+    <ul class="mobile-hidden">
+      <li>
+        <a href="index.html">首頁</a>
+      </li>
+      <li>
+        <a href="#">關於我們</a>
+      </li>
+      <li>
+        <a href="#">立即體驗</a>
+      </li>
+    </ul>
+
+    <a class="p-0 flex-center mobile-hidden mx-100" href="index.html">
+      <img class="logo" src="images/logo.png">
+    </a>
+    <!-- <img class="logo mobile-hidden mx-100" src="images/logo.png"> -->
+
+    <ul>
+      <li class="desktop-hidden">
+        <a href="#">首頁</a>
+      </li>
+      <li class="desktop-hidden">
+        <a href="#">關於我們</a>
+      </li>
+      <li>
+        <a href="#">會員專區</a>
+      </li>
+      <li>
+        <a href="#">團隊介紹</a>
+      </li>
+      <li>
+        <a href="literature.html">文獻資料</a>
+      </li>
+      <li class="desktop-hidden">
+        <a href="#" class="btn btn-primary">立即體驗</a>
+      </li>
+    </ul>
+    <div class="navigation-m-btn ml-auto">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+  <!-- banner -->
+  <div class="banner index-banner">
+    <div class="image image-fixed" style="background-image: url('images/index-banner.jpg')"></div>
+    <div class="mask"></div>
+    <div class="container text-center">
+      <h4>三分鐘找出貓小孩完整營養需求</h4>
+      <button class="btn btn-outline-primary btn-lg text-white">立即體驗</button>
+    </div>
+  </div>
+
+  <!-- 會員專區 -->
+  <section class="bg-secondary py-80">
+    <div class="container text-center">
+      <img src="images/cat-hand.png" width="70px" alt="">
+      <h3 class="py-30">會員專區</h3>
+      <button class="btn btn-primary btn-lg">會員登入</button>
+    </div>
+  </section>
+
+  <!-- story -->
+  <section class="bg-light">
+    <div class="bg-title-en text-secondary">STORY</div>
+    <div class="container">
+      <div class="text-primary mb-30 story-intro">
+        <i class="fas fa-quote-left desktop-hidden mb-10"></i>
+        <p>從學生時期開始養貓到變成上班、小資族的我們，要怎麼在有限的金援下給予貓咪最好的生活，無論是不斷的網路爬文、詢問專家、諮詢獸醫都是我們能做的最大努力，但龐大臨亂的資訊、無系統的整理，外加每隻貓的狀況不一樣，根本無法徹底解決毛孩的問題。</p><br>
+        <p>卡卡貓是由一群獸醫、營養師、及資訊工程背景的貓奴，共同建立的智慧數據系統。在照顧的過程中遇到所有貓主人共同面臨的問題，衍生出的解決方式，讓在乎貓咪的我們，有更精準、方便的照護。自己的毛孩自照顧，因此卡卡貓誕生了...</p>
+      </div>
+
+      <figure class="story-figure mb-30">
+        <div class="image border-rounded" style="background-image: url('images/story1.jpg')"></div>
+
+        <div class="spacer"></div>
+
+        <div class="story-figure-content border border-rounded p-20">
+          <h3 class="text-primary text-center pb-10">800分之1</h3>
+          <p>美國伴侶動物研究指出，貓的疾病有八成都與飲食相關，且在十大死因中，六項為肥胖導致疾病。在市面上超過800款的貓食品牌商品，以及天差地遠的價格分佈，選擇一款最適合的飲食幾乎是不可能的任務。沒有一個完整的飲食照護資訊，能清楚的分析毛孩的營養需求，更沒有一個系統能明確告訴我們哪個品牌，怎麼吃，才最適合我們的毛小孩，最後，毛孩點點滴滴的身體訊息是玩耍還是生病呢？種種的問題，毛孩都需要我們的答案。</p>
+        </div>
+      </figure>
+      
+      <figure class="story-figure">
+        <div class="image border-rounded" style="background-image: url('images/story2.jpg')"></div>
+
+        <div class="spacer"></div>
+
+        <div class="story-figure-content border border-rounded p-20">
+          <h3 class="text-primary text-center pb-10">自己的毛孩自己餵</h3>
+          <p>因為我們需要，所以我們創造。卡卡貓整合獸醫師及營養研究，且利用國內外學術期刊與論文，透過科學整合與大數據分析，打造最適合毛小孩的飲食菜單，不但能降低疾病的產生，更能達到疾病預防的目的。卡卡貓期待每位飼主能享用正確且客製化的資訊，與毛孩健康的一起走下去。</p>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- team -->
+  <section class="bg-secondary">
+    <div class="bg-title-en text-light">TEAM</div>
+    <div class="container">
+      <figure class="text-center mb-60">
+        <h2 class="pb-10">團隊介紹</h2>
+        <p>blah blah blah blah</p>
+        <p>blah blah blah blah blah</p>
+        <p>blah blah blah blah blah blah</p>
+      </figure>
+
+      <ul class="team-menber-list">
+        <li class="border">
+          <img src="images/hostipal.jpg" width="120" alt="">
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- contact us -->
+  <section class="bg-light">
+    <div class="bg-title-en text-secondary">CONTACT US</div>
+    <div class="container">
+      <form action="" class="contact-us-form">
+        <div class="input-group">
+          <input type="text" name="" id="" placeholder="姓名">
+          <div class="spacer"></div>
+          <input type="email" name="" id="" placeholder="Email">
+        </div>
+        <textarea class="mb-25" cols="30" rows="10" placeholder="訊息"></textarea>
+        <input class="btn btn-secondary" type="submit" value="完成">
+      </form>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+      <div class="container">
+        <div>
+          <h6>Contact us</h6>
+          <p class="flex-align-center"><i class="far fa-envelope mr-10"></i> jjrptaiwan@gmail.com</p>
+        </div>
   
+        <div>
+          <h6>Follow us</h6>
+          <div>
+            <a href="#" class="mr-m-5">
+              <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

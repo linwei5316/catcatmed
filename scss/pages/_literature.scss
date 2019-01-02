@@ -1,0 +1,89 @@
+.navigation {
+  justify-content: space-between;
+  
+}
+
+.literature-banner {
+  position: relative;
+  justify-content: center;
+  color: $white;
+
+  .image-fixed {
+    filter: brightness(50%) opacity(55%) grayscale(40%);
+  }
+
+  h1 {
+    @include mobile(){
+      font-size: $h2 * 1.2;
+    }
+  }
+}
+
+.book-list {
+  @include mobile(){
+    h3 {
+      font-size: $p;
+    }
+  }
+}
+
+.literature-list,
+.literature-icon-info {
+  i {
+    font-size: 1.2rem;
+
+    @include mobile(){
+      font-size: 1rem;
+    }
+  }
+}
+
+.literature-list {
+  padding: 0 10px;
+
+  @include mobile(){
+    padding: 0;
+  }
+}
+
+.literature-icon-info {
+  display: inline-flex;
+  li {
+    @include flexCenter;
+    i {
+      margin-right: 5px;
+    }
+  }
+  li:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  @include mobile(){
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+
+    li:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+
+.literature-list {
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  p {
+    line-height: 1.1rem;
+  }
+}
+
+.article-list {
+  h4 {
+    @include mobile(){
+      font-size: $p;
+    }
+  }
+}

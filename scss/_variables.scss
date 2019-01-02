@@ -1,0 +1,94 @@
+// 顏色系統
+$red:        #EF5981;
+$beige:      #F6E3D6;
+$lightBlue:  #87A7D6;
+$grayBlue:   #C1CEE1;
+$blue:       #C3CEDF;
+$linkBlue:   #0B0BF8;
+$navBlack:   #B4B4B4;
+
+$white:      #fff;
+$gray1:      #F7F7F7;
+$gray2:      #E4E4E4;
+$black:      #404041;
+
+
+// 抽象命名
+$primary: $red;
+$secondary: $beige;
+$default: $blue;
+
+
+// 尺寸
+$maxContainerSize: 1200px;
+$breakPoint: 768px;
+$sectionPaddingY: 100px;
+$rounded: 8px;                 // 所有圓角尺寸
+
+$sectionPaddingBottom: 90px;    // 每個段落區塊下方 padding
+
+// 字體大小
+$fontBaseSize: 20px;
+$h1: 6rem;
+$h2: 1.5rem;
+$h3: 1.2rem;
+$h4: 1rem;
+$h5: 0.9rem;
+$h6: 0.8rem;
+$p:  0.8rem;
+$a:  0.8rem;
+
+$fontFamily: 'Microsoft JhengHei';
+
+
+// 按鈕相關
+$btnFontSize: 0.8rem;
+$btnPaddingX: 1.2rem;
+$btnPaddingY: 0.5rem;
+$btnBorder: 2px;
+
+
+// map 
+$types: (
+  primary: $primary,
+  secondary: $secondary,
+  default: $default
+);
+
+$grayScaleTypes: (
+  white: $white,
+  light: $gray1,
+  dark: $gray2
+);
+
+$mixedTypes: map-merge($types, $grayScaleTypes);
+
+$textJustify: left, center, right;
+
+$titleFontSizeMap: (
+  'h1': $h1,
+  'h2': $h2,
+  'h3': $h3,
+  'h4': $h4,
+  'h5': $h5,
+  'h6': $h6,
+);
+
+$spacing: (
+  '0':   0,
+  '5':   5px,
+  '10':  10px,
+  '15':  15px,
+  '20':  20px,
+  '25':  25px,
+  '30':  30px,
+  '40':  40px,
+  '50':  50px,
+  '60':  60px,
+  '80':  80px,
+  '100': 100px
+);
+
+
+
+

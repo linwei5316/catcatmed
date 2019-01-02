@@ -1,0 +1,158 @@
+nav.navigation-index {
+  padding: 10px 15px;
+  justify-content: center;
+}
+
+.index-banner {
+  position: relative;
+  color: $white;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+
+  @include mobile(){
+    padding-bottom: 0;
+    justify-content: center;
+  }
+
+  h4 {
+    margin-bottom: 50px;
+    @include mobile(){
+      margin-bottom: 20px;
+    }
+  }
+
+  .mask {
+    @include size(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(black, 0.35);
+    z-index: 2;
+  }
+
+  .image-fixed {
+    filter: opacity(90%);
+  }
+}
+
+.story-intro {
+  padding: 0 50px;
+  @include mobile(){
+    padding: 0;
+    > p:first-of-type {
+      text-indent: $p;
+    }
+  }
+  > i {
+    font-size: $p;
+  }
+}
+
+.story-figure {
+  display: flex;
+
+  .image {
+    flex: 1;
+    height: 220px;
+  }
+
+  .spacer {
+    flex: 0 0 30px;
+  }
+
+  .story-figure-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &:nth-of-type(even){
+    .image {
+      order: 3;
+    }
+    .spacer {
+      order: 2;
+    }
+    .story-figure-content {
+      order: 1;
+    }
+  }
+
+  @include mobile(){
+    flex-direction: column;
+    align-items: center;
+
+    .image {
+      @include size(50%, 130px)
+    }
+    .spacer {
+      flex: 0 0 20px;
+    }
+
+    &:nth-of-type(even){
+      .image {
+        order: initial;
+      }
+      .spacer {
+        order: initial;
+      }
+      .story-figure-content {
+        order: initial;
+      }
+    }
+  }
+}
+
+.team-menber-list {
+  padding: 0 60px;
+  @include mobile(){
+    padding: 0 30px;
+  }
+
+  & > li {
+    @include size(180px, 210px);
+    text-align: center;
+  }
+}
+
+.contact-us-form {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  @include mobile(){
+    width: 100%;
+
+    input {
+      font-size: 17px;  // 避免 ios input focus 畫面放大
+    }
+  }
+
+  .input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    & > input {
+      flex: 1;
+    }
+    & > .spacer {
+      flex: 0 0 30px;
+    }
+
+    @include mobile(){
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      & > .spacer {
+        flex: 0 0 20px;
+      }
+    }
+  }
+
+  & > div,
+  & > textarea {
+    width: 100%;
+  }
+}
+

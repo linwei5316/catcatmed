@@ -1,0 +1,153 @@
+//  ------- background color --------
+@each $name, $color in $mixedTypes {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+}
+//  ----------
+
+
+//  ------- font -------
+
+@each $name, $color in $mixedTypes {
+  .text-#{$name} {
+    color: $color !important;
+  }
+}
+
+@each $justify in $textJustify {
+  .text-#{$justify} {
+    text-align: $justify;
+  }
+}
+
+@each $level, $fontSize in $titleFontSizeMap {
+  #{$level}, .#{$level}{
+    font-size: $fontSize;
+  }
+}
+
+.text-italic {
+  font-style: italic;
+}
+//  ----------
+
+
+//  ------- button -------
+.btn {
+  display: inline-block;
+  color: $black;
+  font-size: $btnFontSize;
+  padding: $btnPaddingY $btnPaddingX;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  border-radius: $rounded;
+}
+
+.btn-lg {
+  font-size: $btnFontSize * 1.2;
+  padding: $btnPaddingY * 1.2 $btnPaddingX * 1.5;
+}
+
+@each $name, $color in $types {
+  %clearBorder{
+    border: none;
+  }
+
+  .btn-#{$name} {
+    @extend %clearBorder;
+    background-color: $color;
+  }
+}
+
+.btn-primary {
+  color: $white;
+}
+
+@each $name, $color in $types {
+  %clearBackgroundColor{
+    background-color: transparent;
+  }
+
+  .btn-outline-#{$name} {
+    @extend %clearBackgroundColor;
+    border: $btnBorder solid $color;
+  }
+}
+//  ----------
+
+
+//  ------- border --------
+.border {
+  border: 1px solid $black;
+}
+
+.border-rounded {
+  border-radius: $rounded;
+}
+//  ----------
+
+
+//  ------- spacing --------
+@each $spacing, $px in $spacing {
+  .p-#{$spacing} {
+    padding: $px;
+  }  
+  .pt-#{$spacing},
+  .py-#{$spacing} {
+    padding-top: $px;
+  }  
+  .pb-#{$spacing},
+  .py-#{$spacing} {
+    padding-bottom: $px;
+  }
+  .pl-#{$spacing},
+  .px-#{$spacing} {
+    padding-left: $px;
+  }  
+  .pr-#{$spacing},
+  .px-#{$spacing} {
+    padding-right: $px;
+  }
+
+  .m-#{$spacing} {
+    margin: $px;
+  }  
+  .mt-#{$spacing},
+  .my-#{$spacing} {
+    margin-top: $px;
+  }  
+  .mb-#{$spacing},
+  .my-#{$spacing} {
+    margin-bottom: $px;
+  }
+  .ml-#{$spacing},
+  .mx-#{$spacing} {
+    margin-left: $px;
+  }  
+  .mr-#{$spacing},
+  .mx-#{$spacing} {
+    margin-right: $px;
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+//  ----------
+
+
+//  ------- flex -------
+.flex-center {
+  @include flexCenter;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
