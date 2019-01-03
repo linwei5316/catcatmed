@@ -1430,6 +1430,14 @@ nav.navigation-index {
   }
 }
 
+.wrapper {
+  overflow: -moz-hidden-unscrollable;
+}
+
+.wrapper::-webkit-scrollbar {
+  display: none;
+}
+
 .team-menber-list {
   white-space: nowrap;
 }
