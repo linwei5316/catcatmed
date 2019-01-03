@@ -13,17 +13,16 @@
   <!-- 這個菜單比較不好做，這邊是用方便的做法，記得要換網址時要改到所有相對的連結 -->
   <!-- 桌面版分別左右兩個 ul，手機版只顯示下面的 ul，mobile-hidden 與 desktop-hidden 代表哪種裝置不顯示 -->
   <nav class="navigation navigation-index">
-    <!-- <img class="logo desktop-hidden" src="images/logo.png"> -->
     <a class="p-0 flex-center desktop-hidden" href="index.html">
       <img class="logo" src="images/logo.png">
     </a>
     
     <ul class="mobile-hidden">
       <li>
-        <a href="index.html">首頁</a>
+        <a class="scroll-link" href="#banner">首頁</a>
       </li>
       <li>
-        <a href="#">關於我們</a>
+        <a class="scroll-link" href="#story">關於我們</a>
       </li>
       <li>
         <a href="#">立即體驗</a>
@@ -33,20 +32,19 @@
     <a class="p-0 flex-center mobile-hidden mx-100" href="index.html">
       <img class="logo" src="images/logo.png">
     </a>
-    <!-- <img class="logo mobile-hidden mx-100" src="images/logo.png"> -->
 
     <ul>
       <li class="desktop-hidden">
-        <a href="#">首頁</a>
+        <a class="scroll-link" href="#banner">首頁</a>
       </li>
       <li class="desktop-hidden">
-        <a href="#">關於我們</a>
+        <a class="scroll-link" href="#story">關於我們</a>
       </li>
       <li>
         <a href="#">會員專區</a>
       </li>
       <li>
-        <a href="#">團隊介紹</a>
+        <a class="scroll-link" href="#team">團隊介紹</a>
       </li>
       <li>
         <a href="literature.html">文獻資料</a>
@@ -63,7 +61,7 @@
   </nav>
 
   <!-- banner -->
-  <div class="banner index-banner">
+  <div id="banner" class="banner index-banner">
     <div class="image image-fixed" style="background-image: url('images/index-banner.jpg')"></div>
     <div class="mask"></div>
     <div class="container text-center">
@@ -82,7 +80,7 @@
   </section>
 
   <!-- story -->
-  <section class="bg-light">
+  <section id="story" class="bg-light">
     <div class="bg-title-en text-secondary">STORY</div>
     <div class="container">
       <div class="text-primary mb-30 story-intro">
@@ -116,7 +114,7 @@
   </section>
 
   <!-- team -->
-  <section class="bg-secondary">
+  <section id="team" class="bg-secondary">
     <div class="bg-title-en text-light">TEAM</div>
     <div class="container">
       <figure class="text-center mb-60">
