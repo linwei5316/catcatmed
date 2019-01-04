@@ -1,4 +1,4 @@
-// 這邊可以寫一起
+// 偵測若有帶 hash 過來，拔取並準備跳至該區
 var hash = window.location.hash;
 window.location.hash = '';
 document.addEventListener('DOMContentLoaded', function () {
@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var scrollAnimation = false;
     // scroll 動畫
     function step() {
-        // 在下面，減完會是負數，在上面則反之
         var diff = Math.floor((window.scrollY - (this.offsetTop - navHeight)) / 10);
-        var scrollTo = window.scrollY - diff; // 就會是這格要前往的位置
+        var scrollTo = window.scrollY - diff; // 就會是這幀要前往的位置
         window.scrollTo(0, scrollTo);
         console.log('diff', diff);
         if (getScrollTop() + getWindowHeight() === getScrollHeight()) {

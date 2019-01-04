@@ -1,3 +1,0 @@
-@function font($fontSize: $fontBaseSize, $level: 5){
-  @return $fontSize + ($level - $fontSize % $level)
-}
