@@ -41,7 +41,7 @@
         <a class="scroll-link" href="#story">關於我們</a>
       </li>
       <li>
-        <a href="#">會員專區</a>
+        <a href="#">登入會員</a>
       </li>
       <li>
         <a class="scroll-link" href="#team">團隊介紹</a>
@@ -71,11 +71,37 @@
   </div>
 
   <!-- 會員專區 -->
-  <section class="bg-secondary py-80">
+  <section class="bg-light section-member">
     <div class="container text-center">
-      <img class="cat-hand" src="images/cat-hand.png" alt="">
+      <img class="cat-hand" src="images/cat-hand.gif" alt="">
       <h3 class="py-30 mobile-hidden">會員專區</h3>
-      <button class="btn btn-primary btn-lg">會員登入</button>
+      <button class="btn btn-primary btn-lg">登入會員</button>
+    </div>
+  </section>
+
+  <!-- product -->
+  <section class="bg-secondary section-product">
+    <div class="container">
+      <h2 class="text-center mb-30">卡卡貓三大功能</h2>
+      <!-- img 用趴數的 -->
+      <ul>
+        <li>
+          <img src="" alt="">
+          <h3>從需求出發</h3>
+          <p>完成線上問診流程只要1分鐘，</p>
+          <p>告訴卡卡貓你的貓咪的症狀/狀態/需求！</p>
+        </li>
+        <li>
+          <img src="" alt="">
+          <h3>客製化推薦</h3>
+          <p>專業獸醫及營養師幫你從全台近1000款飼料中，選出 5 款最適合的！</p>
+        </li>
+        <li>
+          <img src="" alt="">
+          <h3>自由比較</h3>
+          <p>預算有限？想看評價？產地比較？</p>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -83,13 +109,19 @@
   <section id="story" class="bg-light">
     <div class="bg-title-en text-secondary">STORY</div>
     <div class="container">
-      <div class="text-primary mb-30 story-intro">
+      <div class="text-primary mb-30 story-intro"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <i class="fas fa-quote-left desktop-hidden mb-10"></i>
         <p>從學生時期開始養貓到變成上班、小資族的我們，要怎麼在有限的金援下給予貓咪最好的生活，無論是不斷的網路爬文、詢問專家、諮詢獸醫都是我們能做的最大努力，但龐大臨亂的資訊、無系統的整理，外加每隻貓的狀況不一樣，根本無法徹底解決毛孩的問題。</p><br>
         <p>卡卡貓是由一群獸醫、營養師、及資訊工程背景的貓奴，共同建立的智慧數據系統。在照顧的過程中遇到所有貓主人共同面臨的問題，衍生出的解決方式，讓在乎貓咪的我們，有更精準、方便的照護。自己的毛孩自照顧，因此卡卡貓誕生了...</p>
       </div>
 
-      <figure class="story-figure mb-30">
+      <figure class="story-figure mb-30"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <div class="image border-rounded" style="background-image: url('images/story1.jpg')"></div>
 
         <div class="spacer"></div>
@@ -100,7 +132,10 @@
         </div>
       </figure>
       
-      <figure class="story-figure">
+      <figure class="story-figure"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <div class="image border-rounded" style="background-image: url('images/story2.jpg')"></div>
 
         <div class="spacer"></div>
@@ -117,38 +152,62 @@
   <section id="team" class="bg-secondary">
     <div class="bg-title-en text-light">TEAM</div>
     <div class="container">
-      <figure class="text-center mb-60">
+      <figure class="text-center mb-60"
+        data-bottom-top="transform: translateY(80px); opacity: 0.5"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <h2 class="pb-10">團隊介紹</h2>
         <p>blah blah blah blah</p>
         <p>blah blah blah blah blah</p>
         <p>blah blah blah blah blah blah</p>
       </figure>
 
-      <div class="wrapper">
+      <div class="wrapper"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <ul class="team-menber-list">
           <li>
             <img src="images/hostipal.jpg" width="120" alt="">
+            <h5>MR. James Wan</h5>
+            <p>Profess or University London</p>
+            <p>Doctor at XX Hospital</p>
+            <p>Assistant at XX Hospital</p>
           </li>
           <li>
             <img src="images/hostipal.jpg" width="120" alt="">
+            <h5>MR. James Wan</h5>
+            <p>Profess or University London</p>
+            <p>Doctor at XX Hospital</p>
+            <p>Assistant at XX Hospital</p>
           </li>
           <li>
             <img src="images/hostipal.jpg" width="120" alt="">
+            <h5>MR. James Wan</h5>
+            <p>Profess or University London</p>
+            <p>Doctor at XX Hospital</p>
+            <p>Assistant at XX Hospital</p>
           </li>
           <li>
             <img src="images/hostipal.jpg" width="120" alt="">
+            <h5>MR. James Wan</h5>
+            <p>Profess or University London</p>
+            <p>Doctor at XX Hospital</p>
+            <p>Assistant at XX Hospital</p>
           </li>
           <li>
             <img src="images/hostipal.jpg" width="120" alt="">
+            <h5>MR. James Wan</h5>
+            <p>Profess or University London</p>
+            <p>Doctor at XX Hospital</p>
+            <p>Assistant at XX Hospital</p>
           </li>
           <li>
             <img src="images/hostipal.jpg" width="120" alt="">
-          </li>
-          <li>
-            <img src="images/hostipal.jpg" width="120" alt="">
-          </li>
-          <li>
-            <img src="images/hostipal.jpg" width="120" alt="">
+            <h5>MR. James Wan</h5>
+            <p>Profess or University London</p>
+            <p>Doctor at XX Hospital</p>
+            <p>Assistant at XX Hospital</p>
           </li>
         </ul>
       </div>
@@ -197,5 +256,12 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+      if (document.body.clientWidth > 768){
+        var s = skrollr.init()
+      }
+    </script>
 </body>
 </html>

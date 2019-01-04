@@ -1,43 +1,34 @@
 // 這邊可以寫一起
 var hash = window.location.hash;
 window.location.hash = '';
-window.addEventListener('load', function () {
-    console.log(window.location.hash);
-    // window.scrollTo(0, 0)
-    if (hash) {
-        var scrollToTarget_1 = document.querySelector(hash);
-        console.log('ha', scrollToTarget_1);
-        function step() {
-            // 在下面，減完會是負數，在上面則反之
-            var navHeight = document.querySelector('.navigation').clientHeight;
-            var diff = Math.floor((window.scrollY - (scrollToTarget_1.offsetTop - navHeight)) / 10);
-            var scrollTo = window.scrollY - diff; // 就會是這格要前往的位置
-            window.scrollTo(0, scrollTo);
-            console.log('diff', diff);
-            if (getScrollTop() + getWindowHeight() === getScrollHeight()) {
-                // scrollAnimation = false
-                return;
-            }
-            else if (getScrollTop() === 0) {
-                console.log('到頂！');
-                // scrollAnimation = false
-                return;
-            }
-            if (Math.abs(diff) > 0) {
-                requestAnimationFrame(step);
-            }
-            else {
-                // scrollAnimation = false
-            }
-        }
-        requestAnimationFrame(step);
-    }
-});
 document.addEventListener('DOMContentLoaded', function () {
     var nav = document.querySelector('.navigation');
     var navBtn = document.querySelector('.navigation-m-btn');
     var linkList = document.querySelectorAll('.scroll-link');
     var scrollAnimation = false;
+    // scroll 動畫
+    function step() {
+        // 在下面，減完會是負數，在上面則反之
+        var diff = Math.floor((window.scrollY - (this.offsetTop - navHeight)) / 10);
+        var scrollTo = window.scrollY - diff; // 就會是這格要前往的位置
+        window.scrollTo(0, scrollTo);
+        console.log('diff', diff);
+        if (getScrollTop() + getWindowHeight() === getScrollHeight()) {
+            scrollAnimation = false;
+            return;
+        }
+        else if (getScrollTop() === 0) {
+            console.log('到頂！');
+            scrollAnimation = false;
+            return;
+        }
+        if (Math.abs(diff) > 0) {
+            requestAnimationFrame(step.bind(this));
+        }
+        else {
+            scrollAnimation = false;
+        }
+    }
     // 菜單捲動加上底色
     window.addEventListener('scroll', function () {
         var y = window.scrollY;
@@ -49,6 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
     navBtn.addEventListener('click', function () {
         nav.classList.toggle('open');
     });
+    // 跳轉頁面若帶 hash 就滾動至該欄位
+    if (hash) {
+        var scrollToTarget = document.querySelector(hash);
+        requestAnimationFrame(step.bind(scrollToTarget));
+    }
     // 綁定連結捲動事件
     var navHeight = document.querySelector('.navigation').clientHeight;
     linkList.forEach(function (item) {
@@ -60,31 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (linkTarget.hash) {
                 if (scrollAnimation)
                     return; // 避免重複觸發
-                var scrollToTarget_2 = document.querySelector(linkTarget.hash);
+                var scrollToTarget = document.querySelector(linkTarget.hash);
                 scrollAnimation = true;
-                function step() {
-                    // 在下面，減完會是負數，在上面則反之
-                    var diff = Math.floor((window.scrollY - (scrollToTarget_2.offsetTop - navHeight)) / 10);
-                    var scrollTo = window.scrollY - diff; // 就會是這格要前往的位置
-                    window.scrollTo(0, scrollTo);
-                    console.log('diff', diff);
-                    if (getScrollTop() + getWindowHeight() === getScrollHeight()) {
-                        scrollAnimation = false;
-                        return;
-                    }
-                    else if (getScrollTop() === 0) {
-                        console.log('到頂！');
-                        scrollAnimation = false;
-                        return;
-                    }
-                    if (Math.abs(diff) > 0) {
-                        requestAnimationFrame(step);
-                    }
-                    else {
-                        scrollAnimation = false;
-                    }
-                }
-                requestAnimationFrame(step);
+                requestAnimationFrame(step.bind(scrollToTarget));
             }
         });
     });

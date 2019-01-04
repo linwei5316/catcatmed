@@ -16,13 +16,19 @@
     </a>
     <ul>
       <li>
-        <a href="index.html">首頁</a>
+        <a class="scroll-link" href="#banner">首頁</a>
       </li>
       <li>
         <a href="index.html#story">關於我們</a>
       </li>
       <li>
-        <a href="#">會員專區</a>
+        <a href="#">登入會員</a>
+      </li>
+      <li class="desktop-hidden">
+        <a href="index.html#team">團隊介紹</a>
+      </li>
+      <li class="desktop-hidden">
+        <a href="literature.html">文獻資料</a>
       </li>
       <li>
         <a href="#" class="btn btn-primary">立即體驗</a>
@@ -36,7 +42,7 @@
   </nav>
 
   <!-- banner -->
-  <div class="banner literature-banner">
+  <div id="banner" class="banner literature-banner">
     <div class="image image-fixed" style="background-image: url('images/literature-banner.jpg')"></div>
     <div class="container text-center">
       <h1 class="text-primary mb-20">THE LIBRARY</h1>
@@ -48,7 +54,10 @@
   <section class="bg-light">
     <div class="bg-title-tw text-default">書籍</div>
     <div class="container">
-      <ul class="book-list list">
+      <ul class="book-list list"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <li>
           <h3 class="text-primary">1. Small Animal Clinical Nutrition</h3>
           <p>HAND THATCHER REMILLARD ROULDEBUSH NOVOTMY</p>
@@ -84,7 +93,10 @@
         </li>
       </ul>
 
-      <ul class="literature-list list">
+      <ul class="literature-list list"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <li>
           <i class="fas fa-utensil-spoon text-primary mr-10"></i>
           <div>
@@ -150,7 +162,10 @@
   <section class="bg-light">
     <div class="bg-title-tw text-default">文章</div>
     <div class="container">
-      <ul class="article-list list">
+      <ul class="article-list list"
+        data-bottom-top="transform: translateY(80px); opacity: 0"
+        data-center-top="transform: translateY(0); opacity: 1"
+      >
         <li>
           <h4>Benefits of Age-appopriate Cat Food</h4>
           <span>References: </span><a href="#">PetMD.</a>
@@ -177,7 +192,6 @@
         </li>
       </ul>
     </div>
-
   </section>
 
   <!-- footer -->
@@ -205,5 +219,12 @@
         </div>
       </div>
     </footer>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript">
+      if (document.body.clientWidth > 768){
+        var s = skrollr.init()
+      }
+    </script>
 </body>
 </html>
